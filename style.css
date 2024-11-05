@@ -1,0 +1,20 @@
+.bg-footer {
+    background-color: rgb(51, 69, 85);
+}
+
+.img-circulo {
+    width: 64px;
+}
+
+.hover:hover {
+    opacity: 50%;
+
+}
+
+.texto-enlace {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
