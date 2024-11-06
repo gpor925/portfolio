@@ -18,8 +18,8 @@
       width: 1080px;
     }
     #demoreel-img{
-      width:1080px;
-      height:720px;
+      width:720px;
+      height:480px;
     }
   </style>
 </head>
@@ -39,15 +39,15 @@
             <div class="collapse navbar-collapse h4" id="navbarNav">
               <ul class="navbar-nav w-100">
                 <li class="nav-item mx-auto">
-                  <a class="nav-link" href="#portfolio">Portfolio</a>
+                  <a class="nav-link" href="#portfolio" id="portfolioNav">Portfolio</a>
                 </li>
                 <li class="nav-item mx-auto">
                   <div>
-                    <h1>George Porter</h1>
+                    <h1 id="nombre">George Porter</h1>
                   </div>
                 </li>
                 <li class="nav-item mx-auto">
-                  <a class="nav-link" href="#contacto">Contacto</a>
+                  <a class="nav-link" href="#contacto" id="contactoNav">Contacto</a>
                 </li>
               </ul>
             </div>
@@ -56,14 +56,28 @@
       </div>
     </div>
     <!-- SOBRE MI -->
+     <div class="row justify-content-center mt-4">
+      <div class="col-2 justify-content-center text-center">
+        <h3>Español</h3>
+      </div>
+      <div class="col-3 justify-content-center text-center">
+        <div class="switch">
+          <input type="checkbox" id="toggle" onclick="traduccion()">
+          <label for="toggle"></label>
+        </div>
+      </div>
+      <div class="col-2 justify-content-center text-center">
+        <h3>English</h3>
+      </div>
+     </div>
     <div class="row my-3 justify-content-center " id="portfolio">
       <div class="col-12 order-0">
         <h2 class="text-center" id="sobreMi">Sobre mí</h2>
       </div>
       <div class="col-9 col-md-6 order-2 mt-3">
-        <p>Soy George, tengo 23 años y soy estudiante de Animaciones 2D y3D, juegos y entornos interactivos en el IES Ángel de Saavedra (Córdoba). Mi pasión es la animación, y busco especializarme en el apartado de animación tanto 2D como 3D. En cualquier proyecto soy una persona trabajadora y dedicada, y no tengo miedo a aportar ideas y de aprender de mis errores. No obstante, soy capaz de trabajar en cualquier ámbito, ya sea modelaje, texturizado, rigging, o animación.</p>
+        <p id="bio">Soy George, tengo 23 años y soy estudiante de Animaciones 2D y3D, juegos y entornos interactivos en el IES Ángel de Saavedra (Córdoba). Mi pasión es la animación, y busco especializarme en el apartado de animación tanto 2D como 3D. En cualquier proyecto soy una persona trabajadora y dedicada, y no tengo miedo a aportar ideas y de aprender de mis errores. No obstante, soy capaz de trabajar en cualquier ámbito, ya sea modelaje, texturizado, rigging, o animación.</p>
       </div>
-      <div class="col-7 col-md-2 order-1">
+      <div class="col-3 col-md-2 order-1">
         <img class="img-fluid rounded-2" src="img/perfil.jpeg" alt="pfp">
       </div>
       <div class="col-7 col-md-2 order-3">
@@ -97,22 +111,22 @@
     <div class="row justify-content-center g-0">
       <div class="col-5 d-flex justify-content-center m-0 my-2 mx-2 h-100 rounded-1 border border-4 border-white"
         style="object-fit: cover;">
-        <a href="#demoreel"><img class="img-fluid hover" src="img/demoreel-thumb.png" alt="Demo reel">
+        <a href="#demoreel"><img class="img-fluid hover" src="img/demoreel-thumb.png" alt="Demo reel" id="fotoDemoreel">
         </a>
       </div>
       <div class="col-5 d-flex justify-content-center m-0 my-2 mx-2 h-100 rounded-1 border border-4 border-white"
         style="object-fit: cover;">
-        <a href="#animacion"><img class="img-fluid hover" src="img/animacion-thumb.png" alt="Animación"></a>
+        <a href="#animacion"><img class="img-fluid hover" src="img/animacion-thumb.png" alt="Animación" id="fotoAnimacion"></a>
       </div>
     </div>
     <div class="row justify-content-center g-0">
       <div class="col-5 d-flex justify-content-center m-0 my-2 mx-2 h-100 rounded-1 border border-4 border-white"
         style="object-fit: cover;">
-        <a href="#modelaje"><img class="img-fluid hover" src="img/modelaje-thumb.png" alt="Modelaje"></a>
+        <a href="#modelaje"><img class="img-fluid hover" src="img/modelaje-thumb.png" alt="Modelaje" id="fotoModelaje"></a>
       </div>
       <div class="col-5 d-flex justify-content-center m-0 my-2 mx-2 h-100 rounded-1 border border-4 border-white"
         style="object-fit: cover;">
-        <a href="#arte"><img class="img-fluid hover" src="img/arte-thumb.png" alt="Arte"></a>
+        <a href="#arte"><img class="img-fluid hover" src="img/arte-thumb.png" alt="Arte" id="fotoArte"></a>
       </div>
     </div>
 
@@ -126,7 +140,7 @@
           title="Dire Straits - Money For Nothing (Official Music Video)" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-          <img src="img/rb_30755.png" alt="Demo Reel" id="demoreel-img">
+          <img class="img-fluid" src="img/rb_30755.png" alt="Demo Reel" id="demoreel-img">
       </div>
     </div>
 
@@ -134,15 +148,15 @@
     <h2 id="animacion" class="text-center my-5 text-white">Animación</h2>
     <div class="row justify-content-center g-0">
       <div class="col-5 d-flex justify-content-center m-0 my-2 mx-2 h-100 video" style="object-fit: cover;">
-        <video width="800" height="400" controls>
+        <video width="600" controls>
           <source src="vid/pelota_escenario.mp4" type="video/mp4">
           <source src="movie.ogg" type="video/ogg">
           Your browser does not support the video tag.
         </video>
       </div>
       <div class="col-5 d-flex justify-content-center m-0 my-2 mx-2 h-100 video" style="object-fit: cover;">
-        <video width="800" height="400" controls>
-          <source src="vid/shrek.mp4.mp4" type="video/mp4">
+        <video width="600" controls>
+          <source src="vid/shrek.mp4" type="video/mp4">
           <source src="movie.ogg" type="video/ogg">
           Your browser does not support the video tag.
         </video>
@@ -185,7 +199,7 @@
     <!-- CONTACTO -->
     <div id="contacto" class="row mt-5 bg-footer">
       <div class="col-12">
-        <h2 class="text-center text-white my-4">Contacto</h2>
+        <h2 class="text-center text-white my-4" id="contactoText">Contacto</h2>
       </div>
       <div class="col-12 text-center mb-1">
         <a href=""

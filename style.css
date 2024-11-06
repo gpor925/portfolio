@@ -18,3 +18,53 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* BOTON IDIOMAS */
+
+/* Hide default checkbox */
+.switch input {
+    display: none;
+  }
+  
+  /* Style the toggle switch container */
+  .switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Toggle background image for off state */
+  .switch label {
+    background-image: url(img/españa_switch.png); /* Image for "off" state */
+    background-size: cover;
+    background-position: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-image 0.3s;
+  }
+  
+  /* Toggle button circle */
+  .switch label::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  /* Checked state: change background image and move the circle */
+  .switch input:checked + label {
+    background-image: url(img/ingles_switch.png); /* Image for "on" state */
+  }
+  
+  .switch input:checked + label::after {
+    transform: translateX(26px); /* Moves circle to the right */
+  }
